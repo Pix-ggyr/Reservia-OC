@@ -3,8 +3,10 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/desktop.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/aside.css">
   <script src="https://kit.fontawesome.com/ab16bb9001.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;700&display=swap" rel="stylesheet">
   <title>Reservia</title>
@@ -12,32 +14,16 @@
 
 <body>
   <header>
-    <div class="desktop-header">
-      <div class="logo">
-        <img src="./assets/Reservia@3x.png" alt="logo-de-reservia-bleu">
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li>Hébergements</li>
-          <li>Activités</li>
-          <li><a class="register" href="#">S'inscrire</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="mobile-header">
-      <div class="logo">
-        <img src="./assets/Reservia@3x.png" alt="logo-de-reservia-bleu">
-        <a class="register" href="#">S'inscrire</a>
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li>Hébergements</li>
-          <li>Activités</li>
-        </ul>
-      </nav>
-    </div>
-
+    <nav class="navbar">
+      <ul>
+        <li class="logo"><img src="./assets/Reservia@3x.png" alt="logo-de-reservia-bleu"></li>
+        <li><a class="sections" href="#all-estates">Hébergements</a></li>
+        <li><a class="sections" href="#activities">Activités</li>
+        <li><a class="register" href="#">S'inscrire</a></li>
+      </ul>
+    </nav>
   </header>
+
   <main class="flex-container">
     <section class="page-title">
       <h1>Trouvez votre hébergements pour des vacances de rêves</h1>
@@ -85,7 +71,7 @@
       <p>Plus de 500 logements sont disponibles dans cette ville</p>
     </div>
 
-    <section class="town">
+    <section id="all-estates" class="town">
       <div class="grey-rounded whole-list">
         <h1>Hébergements à Marseille</h1>
         <div class="main-estate">
@@ -186,7 +172,7 @@
       </div>
     </section>
 
-    <aside>
+    <aside id="activities">
       <h1>Activités à Marseille</h1>
       <div class="town-activities">
         <div class="acti-box acti-box-solo">

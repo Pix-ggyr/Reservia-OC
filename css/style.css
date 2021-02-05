@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 700;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -25,13 +25,13 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 15px;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
 p {
-  font-size: 14px;
+  font-size: 13px;
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-weight: 300;
   margin-block-start: 0;
@@ -43,6 +43,7 @@ p {
 .flex-container {
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
   margin: 10px;
   max-width: 100vw;
 }
@@ -82,9 +83,10 @@ input {
   font-weight: 700;
 }
 
-input.search-btn {
+input.search-btn,
+button.search-btn {
   height: 40px;
-  width: 100px;
+  width: 60px;
   border: none;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -95,19 +97,23 @@ input.search-btn {
   margin: 0;
 }
 
+input.search-btn {
+  display: none;
+}
+
 /*----Filters----*/
 
 div.filters {
-  width: 100%;
+  width: 95%;
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  flex-flow: column nowrap;
+  align-items: left;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 div.filters > div.box {
-  height: 5px;
+  height: 15px;
   margin: 5px 0px 15px 25px;
   padding: 15px 15px 15px 0px;
   border-top: solid 2px #cecdcd;
@@ -121,8 +127,8 @@ div.filters > div.box {
 }
 
 div.filters > div.box > div.icon-rounded {
-  height: 35px;
-  width: 35px;
+  height: 45px;
+  width: 45px;
   background-color: #deebff;
   color: #0065fc;
   display: flex;
@@ -168,7 +174,7 @@ div.filters > div.box > p {
 }
 
 .town {
-  width: 100%;
+  width: 95%;
   display: flex;
   flex-flow: column-reverse wrap;
 }
@@ -180,8 +186,6 @@ div.filters > div.box > p {
   flex-flow: row wrap;
   justify-content: center;
   margin: 0;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 .most-wanted {
@@ -189,8 +193,6 @@ div.filters > div.box > p {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
   margin-bottom: 20px;
 }
 
@@ -202,8 +204,9 @@ div.filters > div.box > p {
 
 div.whole-list > h1 {
   width: 100%;
-  margin-left: 15px;
+  margin-left: 10px;
   padding-top: 15px;
+  padding-bottom: 0;
 }
 
 div.whole-list > div.main-estate {
@@ -242,95 +245,37 @@ div.main-estate > div.rate {
   color: #0065fc;
 }
 
-/*----side Most Wanted----*/
-div.most-wanted > h1 {
+p.read-more {
   width: 100%;
-  margin-left: 15px;
-  padding-top: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 12px 0 12px 10px;
+  text-align: left;
 }
 
-div.most-wanted > div.fav-estate {
-  display: flex;
-  flex-flow: row wrap;
-  background-color: white;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 15px;
-  height: 135px;
-  width: 90%;
-  box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
-    0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
-}
-
-div.most-wanted > div.fav-estate > img {
-  width: 40%;
-  height: 135px;
-  object-fit: cover;
-  align-self: left;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-div.most-wanted > div.fav-estate > div.fav-estate-description {
-  width: 60%;
-  display: flex;
-  flex-flow: column nowrap;
-}
-
-div.fav-estate-description > h3 {
-  margin: 5px 0 0 10px;
-}
-
-div.fav-estate-description > p {
-  margin: 5px 0 0 10px;
-}
-
-div.fav-estate-description > div.rate {
-  margin: 45px 0 0 10px;
-  font-size: 14px;
-  color: #0065fc;
+p.read-more a {
+  text-decoration: none;
+  color: black;
 }
 
 @media (min-width: 768px) {
-  body {
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-  }
-
   h1 {
     font-size: 24px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    margin-block-start: 0;
-    margin-block-end: 0;
   }
 
   h2 {
     font-size: 22px;
-    font-weight: 700;
-    margin-block-start: 0;
-    margin-block-end: 0;
   }
 
   h3 {
-    font-size: 18px;
-    margin-block-start: 0;
-    margin-block-end: 0;
+    font-size: 16px;
   }
 
   p {
     font-size: 16px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    margin-block-start: 0;
-    margin-block-end: 0;
   }
 
-  /* Main container */
+  /*----Main container----*/
 
   .flex-container {
     display: flex;
@@ -339,124 +284,44 @@ div.fav-estate-description > div.rate {
     max-width: 100vw;
   }
 
-  /* Search section */
+  /*----Search section----*/
 
   .search {
-    display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: left;
   }
 
-  .map-point {
-    height: 60px;
-    width: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-  }
-
-  input {
-    height: 57px;
-    width: 225px;
-    padding: 0;
-    padding-left: 10px;
-    border: none;
-    border-top: solid 1.5px #f2f2f2;
-    border-bottom: solid 1.5px #f2f2f2;
-    font-size: 18px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+  button.search-btn {
+    display: none;
   }
 
   input.search-btn {
-    height: 60px;
-    width: 150px;
-    border: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: #0065fc;
-    color: white;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
+    display: inline;
+    width: 100px;
   }
 
-  /* Filters */
+  /*----Filters----*/
 
   div.filters {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 90%;
+    flex-flow: row wrap;
   }
 
   div.filters > div.box {
-    height: 20px;
-    margin: 15px 0px 15px 25px;
-    padding: 15px 20px 15px 0px;
-    border-top: solid 2px #cecdcd;
-    border-bottom: solid 2px #cecdcd;
-    border-right: solid 2px #cecdcd;
-    border-radius: 100px;
-    font-weight: bold;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
+    height: 10px;
   }
 
   div.filters > div.box > div.icon-rounded {
-    height: 50px;
-    width: 50px;
-    background-color: #deebff;
-    color: #0065fc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    border: solid 2px #deebff;
-    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
   }
 
   div.filters > div.box > p {
-    font-weight: 700;
-    font-size: 20px;
-    padding-left: 15px;
+    font-size: 16px;
   }
 
-  /* Important */
-
-  .important {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-
-  .i-circled {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    font-weight: 800;
-    text-align: center;
-    color: #0065fc;
-    border-radius: 100px;
-    border: solid 1.5px #f2f2f2;
-  }
-
-  /* Sections */
-
-  .grey-rounded {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding: 20px 30px;
-  }
+  /*----Sections----*/
 
   .town {
     width: auto;
@@ -465,25 +330,18 @@ div.fav-estate-description > div.rate {
   }
 
   .whole-list {
-    width: 70%;
     margin-right: 25px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
   }
 
   .most-wanted {
-    width: 30%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    margin-bottom: 0;
   }
 
   .activities {
     margin-top: 25px;
   }
 
-  /* Estates */
+  /*----Estates----*/
 
   div.whole-list > h1 {
     width: 100%;
@@ -524,252 +382,14 @@ div.fav-estate-description > div.rate {
 
   div.main-estate > div.rate {
     margin: 5px 0 0 10px;
-    font-size: 14px;
-    color: #0065fc;
-  }
-
-  /* side Most Wanted */
-  div.most-wanted > h1 {
-    width: 100%;
-    padding-top: 10px;
-  }
-
-  div.most-wanted > div.fav-estate {
-    display: flex;
-    flex-flow: row wrap;
-    background-color: white;
-    margin: 15px;
-    padding: 5px;
-    border-radius: 15px;
-    height: 135px;
-    width: 100%;
-    box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
-      0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
-  }
-
-  div.most-wanted > div.fav-estate > img {
-    width: 40%;
-    height: 135px;
-    object-fit: cover;
-    align-self: left;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-
-  div.most-wanted > div.fav-estate > div.fav-estate-description {
-    width: 60%;
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  div.fav-estate-description > h3 {
-    margin: 5px 0 0 10px;
-  }
-
-  div.fav-estate-description > p {
-    margin: 5px 0 0 10px;
-  }
-
-  div.fav-estate-description > div.rate {
-    margin: 45px 0 0 10px;
     font-size: 14px;
     color: #0065fc;
   }
 }
 
 @media (min-width: 960px) {
-  body {
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-  }
-
-  h1 {
-    font-size: 24px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
-  h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
-  h3 {
-    font-size: 18px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
-  p {
-    font-size: 16px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    margin-block-start: 0;
-    margin-block-end: 0;
-  }
-
-  /* Main container */
-
-  .flex-container {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 20px;
-    max-width: 100vw;
-  }
-
-  /* Search section */
-
-  .search {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .map-point {
-    height: 60px;
-    width: 60px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-  }
-
-  input {
-    height: 57px;
-    width: 225px;
-    padding: 0;
-    padding-left: 10px;
-    border: none;
-    border-top: solid 1.5px #f2f2f2;
-    border-bottom: solid 1.5px #f2f2f2;
-    font-size: 18px;
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: 700;
-  }
-
-  input.search-btn {
-    height: 60px;
-    width: 150px;
-    border: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: #0065fc;
-    color: white;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-  }
-
-  /* Filters */
-
-  div.filters {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  div.filters > div.box {
-    height: 20px;
-    margin: 15px 0px 15px 25px;
-    padding: 15px 20px 15px 0px;
-    border-top: solid 2px #cecdcd;
-    border-bottom: solid 2px #cecdcd;
-    border-right: solid 2px #cecdcd;
-    border-radius: 100px;
-    font-weight: bold;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-  }
-
-  div.filters > div.box > div.icon-rounded {
-    height: 50px;
-    width: 50px;
-    background-color: #deebff;
-    color: #0065fc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    border: solid 2px #deebff;
-    font-size: 24px;
-  }
-
-  div.filters > div.box > p {
-    font-weight: 700;
-    font-size: 20px;
-    padding-left: 15px;
-  }
-
-  /* Important */
-
-  .important {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-
-  .i-circled {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    font-weight: 800;
-    text-align: center;
-    color: #0065fc;
-    border-radius: 100px;
-    border: solid 1.5px #f2f2f2;
-  }
-
-  /* Sections */
-
-  .grey-rounded {
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding: 20px 30px;
-  }
-
-  .town {
-    width: auto;
-    display: flex;
-    flex-flow: row nowrap;
-  }
-
-  .whole-list {
-    width: 70%;
-    margin-right: 25px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-
-  .most-wanted {
-    width: 30%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-
-  .activities {
-    margin-top: 25px;
-  }
-
-  /* Estates */
+  /*----Sections----*/
+  /*----Estates----*/
 
   div.whole-list > h1 {
     width: 100%;
@@ -810,54 +430,6 @@ div.fav-estate-description > div.rate {
 
   div.main-estate > div.rate {
     margin: 5px 0 0 10px;
-    font-size: 14px;
-    color: #0065fc;
-  }
-
-  /* side Most Wanted */
-  div.most-wanted > h1 {
-    width: 100%;
-    padding-top: 10px;
-  }
-
-  div.most-wanted > div.fav-estate {
-    display: flex;
-    flex-flow: row wrap;
-    background-color: white;
-    margin: 15px;
-    padding: 5px;
-    border-radius: 15px;
-    height: 135px;
-    width: 100%;
-    box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
-      0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
-  }
-
-  div.most-wanted > div.fav-estate > img {
-    width: 40%;
-    height: 135px;
-    object-fit: cover;
-    align-self: left;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-
-  div.most-wanted > div.fav-estate > div.fav-estate-description {
-    width: 60%;
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  div.fav-estate-description > h3 {
-    margin: 5px 0 0 10px;
-  }
-
-  div.fav-estate-description > p {
-    margin: 5px 0 0 10px;
-  }
-
-  div.fav-estate-description > div.rate {
-    margin: 45px 0 0 10px;
     font-size: 14px;
     color: #0065fc;
   }

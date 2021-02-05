@@ -1,3 +1,105 @@
+/*--------------Aside: Most Wanted--------------*/
+
+div.most-wanted > h1 {
+  width: 100%;
+  margin-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+div.most-wanted > div.fav-estate {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  height: 135px;
+  width: 80%;
+  box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
+    0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
+}
+
+div.most-wanted > div.fav-estate > img {
+  width: 40%;
+  height: 135px;
+  object-fit: cover;
+  align-self: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+div.most-wanted > div.fav-estate > div.fav-estate-description {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+div.fav-estate-description > h3 {
+  margin: 5px 0 0 10px;
+}
+
+div.fav-estate-description > p {
+  margin: 5px 0 0 10px;
+}
+
+div.fav-estate-description > div.rate {
+  margin: 45px 0 0 10px;
+  font-size: 14px;
+  color: #0065fc;
+}
+
+/*-----Responsive-----*/
+
+@media screen and (min-width: 768px) {
+  div.most-wanted > h1 {
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  div.most-wanted > div.fav-estate {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    height: 135px;
+    width: 90%;
+    box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
+      0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
+  }
+
+  div.most-wanted > div.fav-estate > img {
+    width: 40%;
+    height: 135px;
+    object-fit: cover;
+    align-self: left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  div.most-wanted > div.fav-estate > div.fav-estate-description {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  div.fav-estate-description > h3 {
+    margin: 5px 0 0 10px;
+  }
+
+  div.fav-estate-description > p {
+    margin: 5px 0 0 10px;
+  }
+
+  div.fav-estate-description > div.rate {
+    margin: 45px 0 0 10px;
+    font-size: 14px;
+    color: #0065fc;
+  }
+}
+
 /*--------------Aside: Activities--------------*/
 
 aside > h1 {
@@ -123,7 +225,10 @@ div.last {
   }
 }
 
-@media (min-width: 960px) {
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 960px) {
   /* Activities */
 
   aside > h1 {

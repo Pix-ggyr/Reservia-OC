@@ -57,6 +57,10 @@ header > .navbar > ul > li.register a {
 /*--------------Responsive--------------*/
 
 @media screen and (min-width: 768px) {
+  header {
+    margin-left: 25px;
+  }
+
   header > .navbar > ul {
     flex-flow: row nowrap;
   }

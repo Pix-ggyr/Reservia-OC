@@ -1,32 +1,101 @@
-/*--------------Aside: Activities--------------*/
+/*--------------Aside: Most Wanted--------------*/
 
-aside > h1 {
-  margin-top: 40px;
+div.most-wanted > h1 {
+  width: 100%;
+  margin-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 0;
 }
 
-div.town-activities {
+div.most-wanted > div.fav-estate {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 15px;
+  height: 135px;
+  width: 80%;
+  box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
+    0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
+}
+
+div.most-wanted > div.fav-estate > img {
+  width: 40%;
+  height: 135px;
+  object-fit: cover;
+  align-self: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+div.most-wanted > div.fav-estate > div.fav-estate-description {
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+div.fav-estate-description > h3 {
+  margin: 5px 0 0 10px;
+}
+
+div.fav-estate-description > p {
+  margin: 5px 0 0 10px;
+}
+
+div.fav-estate-description > div.rate {
+  margin: 45px 0 0 10px;
+  font-size: 14px;
+  color: #0065fc;
+}
+
+/*-----Responsive-----*/
+
+@media screen and (min-width: 768px) {
+  div.most-wanted > h1 {
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+/*--------------Aside: Activities--------------*/
+
+aside#activities {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 40px;
+}
+
+aside > h1 {
+  align-self: flex-start;
+  margin-top: 40px;
+  margin-left: 25px;
+}
+
+aside#activities > div.town-activities {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 div.acti-box {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  width: 100%;
+  width: 80%;
   justify-content: center;
   text-align: left;
-  padding-right: 15px;
-  margin-bottom: 15px;
 }
 
 div.acti-box > div.activity {
   width: 100%;
   height: auto;
+  margin-bottom: 25px;
   border-radius: 25px;
   box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
     0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
@@ -61,127 +130,24 @@ div.last {
 }
 
 @media screen and (min-width: 768px) {
-  /* Activities */
+  aside#activities {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
   aside > h1 {
+    width: 100%;
     margin-top: 40px;
   }
 
-  div.town-activities {
+  aside#activities > div.town-activities {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 40px;
   }
 
   div.acti-box {
-    display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    width: 23%;
-    justify-content: space-between;
-    text-align: left;
-    padding-right: 15px;
-  }
-
-  div.acti-box > div.activity {
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
-      0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
-  }
-
-  div.acti-box > div.activity > p {
-    height: 60px;
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
     padding-left: 15px;
-  }
-
-  div.acti-box-solo > div.activity > img {
-    height: 400px;
-  }
-
-  div.acti-box-duo > div.activity > img {
-    height: 150px;
-  }
-
-  div.activity > img {
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-  }
-
-  div.last {
-    padding: 0;
-  }
-}
-
-@media (min-width: 960px) {
-  /* Activities */
-
-  aside > h1 {
-    margin-top: 40px;
-  }
-
-  div.town-activities {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  div.acti-box {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    width: 23%;
-    justify-content: space-between;
-    text-align: left;
     padding-right: 15px;
-  }
-
-  div.acti-box > div.activity {
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-    box-shadow: 0 2.9px 32.8px rgba(0, 0, 0, 0.04),
-      0 6.8px 45.5px rgba(0, 0, 0, 0.06), 0 21px 46px rgba(0, 0, 0, 0.1);
-  }
-
-  div.acti-box > div.activity > p {
-    height: 60px;
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-  }
-
-  div.acti-box-solo > div.activity > img {
-    height: 400px;
-  }
-
-  div.acti-box-duo > div.activity > img {
-    height: 150px;
-  }
-
-  div.activity > img {
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-  }
-
-  div.last {
-    padding: 0;
   }
 }

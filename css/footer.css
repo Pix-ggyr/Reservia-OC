@@ -29,6 +29,8 @@ footer > div.bottom-cat > a:hover {
   color: #0065fc;
 }
 
+/*--------------Responsive--------------*/
+
 @media (min-width: 768px) {
   footer {
     flex-flow: row nowrap;

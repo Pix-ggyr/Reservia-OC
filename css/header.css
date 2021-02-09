@@ -95,5 +95,7 @@ header > .navbar > ul > li.register a {
   }
 }
 
+/*--------------Responsive: wider screens--------------*/
+
 @media screen and (min-width: 960px) {
 }
